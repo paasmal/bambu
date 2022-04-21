@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../componentes/Header'
 
-import db  from '../services/dBase'
+import db from '../services/dBase'
 import { collection, addDoc, Timestamp } from 'firebase/firestore'
 
 export default function Home() {
