@@ -1,9 +1,57 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../componentes/Header'
 
+import db  from '../services/dBase'
+import { collection, addDoc, Timestamp } from 'firebase/firestore'
+
 export default function Home() {
   const [abrir, setAbrir] = useState(false)
+  const [Ipp, setIpp] = useState(null)
+  const [ingreso, setIngreso] = useState(null)
+  const [mal, setMal] = useState(false)
+  /* const [lat, setLat] = useState(null)
+  const [lon, setLon] = useState(null) */
+
+  /* const getPosition = (data) => {
+    setLat(data.coords.latitude)
+    setLon(data.coords.longitude)
+  }
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(getPosition);
+  }, []) */
+
+  useEffect(() => {
+    fetch('https://api.ipify.org/?format=json')
+        .then(response => response.json())
+        .then(result => setIpp(result.ip))   
+  }, [])
+
+  const handleTerminar = e => {
+    e.preventDefault()
+    const { clave } = e.target.elements
+    const password = clave.value.toLowerCase()
+
+    if(password === abrir.clave){
+      setMal(false)
+      var hoy = new Date()
+      var hora = hoy.getHours() < 10 ? `0${hoy.getHours()}` : hoy.getHours()
+      var min = hoy.getMinutes() < 10 ? `0${hoy.getMinutes()}` : hoy.getMinutes()
+      var dia = hoy.getDate()
+      var mes = hoy.getMonth()+1
+      var ano = hoy.getFullYear()
+      
+      setIngreso(`${hora}:${min}`)
+
+      const docRef = addDoc(collection(db, 'bambu'), {
+        user: abrir.user,
+        fecha: Timestamp.fromDate(new Date()),
+        fechaId: `${ano}${mes < 10 ? `0${mes}` : mes}${dia}`
+      });
+    } else setMal(true)
+  }
+
   return (
     <>
       <Head>
@@ -14,30 +62,51 @@ export default function Home() {
 
       <main>
         <Header />
-        <div>
-          {/* <p className='titulo'>CONTROL DE INGRESO / SALIDA</p>
-          <div className='lista'>
-            <p onClick={() => setAbrir(true)}>Abad Paola</p>
-            <p>Asmal Arias Pedro</p>
-            <p>Jara Tatiana</p>
-            <p>Pesantez Sebastian</p>
-            <p>Yascaribay Andres</p>
-            <p>Zuñiga Jonnathan</p>
-          </div> */}
-          <p>Proximamente...</p>
+        <div className='container'>
+          {
+            (Ipp == '131.161.221.99' || Ipp == '131.161.221.98') ?
+            <>
+              <div className='izquierda'>
+                <p className='titulo'>CONTROL DE INGRESO</p>
+                
+              </div>
+              <section>
+                <p onClick={() => setAbrir({ user:'pabad', nombre: 'Paola Abad', clave: 'pam'})}>Paola Abad</p>
+                <p onClick={() => setAbrir({ user:'tjara', nombre: 'Tatiana Jara', clave: 'tjq'})}>Tatiana Jara</p>
+                <p onClick={() => setAbrir({ user: 'jzuniga', nombre: 'Jonnathan Zuñiga', clave: 'jzb'})}>Jonnathan Zuñiga</p>
+                <p onClick={() => setAbrir({ user: 'lcabrera', nombre: 'Luciano Cabrera', clave: 'lcv'})}>Luciano Cabrera</p>
+                <p onClick={() => setAbrir({ user: 'pasmal', nombre: 'Pedro Asmal', clave: 'paa'})}>Pedro Asmal</p>
+              </section>
+            </> 
+            : <p>Proximamente...</p>
+          }
         </div>
-        {/* {
+        {
           abrir &&
           <div className='modal'>
             <div className='card'>
-              <p onClick={() => setAbrir(false)}>Hola</p>
+              <p onClick={() => {setAbrir(false), setIngreso(null), setMal(false)}} className='cerrar'>X</p>
+              <p className='nombre'>{abrir.nombre}</p>
+              <form onSubmit={handleTerminar} className='sesion'>
+                <p className='form-p2'>Ingrese su contraseña:</p>
+                <input className='input' name='clave' type='text' required autoComplete='off' />
+                { mal && <p className='incorrecto'>Contraseña Incorrecta</p> }
+                <button className='boton'>Marcar Ingreso</button>
+              </form>
+              {
+                ingreso &&
+                <>
+                  <p className='detalle'>Ingreso a las:</p>
+                  <p className='hora'>{ingreso}</p>
+                </>
+              }
             </div>
           </div>
-        } */}
+        }
       </main>
 
       <style jsx>{`
-        div{
+        .container{
           width: 100%;
           height: calc(100vh - 70px);
           display: flex;
@@ -45,22 +114,25 @@ export default function Home() {
           align-items: center;
         }
 
-        /* .titulo{
-          margin-top: 50px;
-          font-size: 22px;
-          font-weight: bold;
+        .izquierda{
+          width: 30%;
           text-align: center;
         }
 
-        .lista{
-          width: 40%;
-          margin: 0 auto;
+        .titulo{
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        section{
+          width: 30%;
+          margin-left: 50px;
           background: rgba(0, 0, 0, 0.05);
           padding: 6px 12px;
           border-radius: 20px;
         }
 
-        .lista p{
+        section p{
           background: white;
           padding: 8px 8px 8px 15px;
           font-size: 18px;
@@ -70,13 +142,13 @@ export default function Home() {
           cursor: pointer;
         }
 
-        .lista p:hover{
+        section p:hover{
           background: black;
           color: white;
         }
 
         .modal{
-          background: rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.5);
           position: absolute;
           top: 0;
           bottom: 0;
@@ -88,13 +160,87 @@ export default function Home() {
         }
 
         .card{
+          position: relative;
           background: white;
           height: 400px;
           width: 40%;
-          margin: 0 auto;
-          padding: 6px 12px;
+          text-align: center;
+          padding: 20px;
           border-radius: 20px;
-        } */
+        }
+
+        .cerrar{
+          position: absolute;
+          bottom: -5px;
+          right: 15px;
+          background: black;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          padding: 6px 12px 7px 12px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+
+        .nombre{
+          margin: 30px 0;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .input{
+          height: 35px;
+          width: 70%;
+          font-size: 22px;
+          text-align: center;
+          border: none;
+          outline:none;
+          cursor: pointer;
+          border-bottom: 1px solid black;
+          margin-bottom: 25px;
+        }
+
+        .boton{
+          background: tomato;
+          padding: 15px 50px;
+          color: white;
+          font-size: 19px;
+          font-weight: bold;
+          border-radius: 10px;
+          cursor: pointer;
+          border: none;
+          outline:none;
+          cursor: pointer;
+        }
+
+        .detalle{
+          margin: 30px 0 10px 0;
+        }
+
+        .hora{
+          margin: 0;
+          font-size: 25px;
+          font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px){
+          .container{
+            flex-direction: column;
+          }
+
+          .izquierda{
+            width: 100%;
+          }
+
+          section{
+            width: 90%;
+            margin-left: 0;
+          }
+
+          .card{
+            width: 90%;
+          }
+        }
       `}</style>
     </>
   )
