@@ -19,7 +19,7 @@ export default function Home() {
     e.preventDefault()
     const { usuario, password } = e.target.elements
 
-    signInWithEmailAndPassword(auth, `${usuario.value.toLoweCase()}@bambu.ec`, password.value)
+    signInWithEmailAndPassword(auth, `${usuario.value.toLowerCase()}@bambu.ec`, password.value)
       .then((userCredential) => {
         console.log('Ingreso')
       })
