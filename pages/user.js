@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useState, useEffect, useContext } from 'react'
 import { AuthContext } from '../services/authContext'
 
@@ -7,9 +8,10 @@ import Modal from '../componentes/Modal'
 
 import { db, auth } from '../services/dbase'
 import { signOut, updatePassword } from 'firebase/auth'
-import { doc, setDoc, Timestamp, onSnapshot } from 'firebase/firestore'
+import { doc, setDoc, Timestamp, onSnapshot, collection, getDocs } from 'firebase/firestore'
 
 export default function User(){
+    const router = useRouter()
     const { user } = useContext(AuthContext)
     const [abrir, setAbrir] = useState(false)
     const [marcado, setMarcado] = useState(false)
@@ -73,6 +75,7 @@ export default function User(){
                 <div className='container'>
                     <div className='menu'>
                         <p className='nombre'>{user && user.displayName.toUpperCase()}</p>
+                        <p className='boton' onClick={() => router.push('/detalle')}>Detalle de ingresos</p>
                         <p className='boton' onClick={handleSalir}>Cerrar Sesión</p>
                         <p className='boton' onClick={() => setAbrir(true)}>Cambiar Contraseña</p>
                     </div>
