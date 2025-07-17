@@ -31,7 +31,7 @@ export default function Footer() {
                     <Correo color='black' />
                     <p>info@bambu.ec</p>
                 </div>
-                <p className='test' onClick={() => router.push('/vtest')}>Medidor de velocidad</p>
+                <p className='test' onClick={() => router.push('/vtest')}>Medidor de Velocidad</p>
             </div>
             <div className='der'>
                 <p className='t1'>Normas y regulaciones</p>
