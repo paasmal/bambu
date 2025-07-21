@@ -39,12 +39,12 @@ export default function Footer() {
                 <p className='enlaces' onClick={() => router.push('/documentos/guia-parental')}>Guia control parental (Arcotel)</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-parental')}>Resolución guia control parental</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-arcotel')}>Resolución Arcotel 2022-0123</p>
-                <p className='enlaces' onClick={() => router.push('/documentos/senadi')}>Disposición SENADI</p>
-                <p className='enlaces' onClick={() => router.push('/documentos/seguridad')}>Seguridad informática</p>
-                <p className='enlaces' onClick={() => router.push('/documentos/abonados')}>Reglamento de abonados</p>
+                <p className='enlaces' onClick={() => router.push('/documentos/senadi')}>Disposiciones SENADI</p>
+                <p className='enlaces' onClick={() => router.push('/documentos/seguridad-informatica')}>Guia de seguridad informática</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/adulto-mayor')}>Ley adulto mayor</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/ley-discapacidades')}>Ley organica de discapacidades</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/calidad-internet')}>Normas de calidad internet</p>
+                <p className='enlaces' onClick={() => router.push('/documentos/abonados')}>Reglamento de abonados</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/contratos-adhesion')}>Normas técnicas de contratos de adhesión</p>
             </div>
             
@@ -126,6 +126,24 @@ export default function Footer() {
                     text-align: center;
                     border-radius: 6px;
                     cursor: pointer;
+                }
+
+                @media screen and (max-width: 768px){
+                    footer{
+                        margin-top: 20px;
+                        height: auto;
+                        width: 100%;
+                        padding: 16px;
+                        flex-direction: column-reverse;
+                    }
+
+                    .izq, .der{
+                        width: 100%;
+                    }
+
+                    .der{
+                        margin-bottom: 30px;
+                    }
                 }
             `}</style>
         </footer>

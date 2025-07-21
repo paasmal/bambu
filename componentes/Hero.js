@@ -137,7 +137,82 @@ export default function Hero({ onScrollPlanes }){
                     transition: 0.5s ease;
                 }
 
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 640px){
+                    section{
+                        width: 100%;
+                        height: 240px;
+                    }
+
+                    .principal{
+                        bottom: 0;
+                        right: 10px;
+                        height: 200px;
+                    }
+
+                    svg{
+                        bottom: -5px;
+                        right: -25px;
+                        height: 250px;
+                        width: 240px;
+                    }
+
+                    .ins-not{
+                        height: 25px;
+                        right: 182px;
+                        bottom: 84px;
+                    }
+
+                    .tiktok{
+                        bottom: 85px;
+                        height: 27px;
+                        right: 0px;
+                    }
+
+                    .youtube{
+                        bottom: 150px;
+                        right: 10px;
+                        height: 20px;
+                    }
+
+                    .netflix{
+                        bottom: 135px;
+                        right: 185px;
+                        height: 25px;
+                    }
+
+                    .fb{
+                        bottom: 185px;
+                        right: 155px;
+                        height: 30px;
+                    }
+
+                    .google{
+                        bottom: 185px;
+                        right: 50px;
+                        height: 35px;
+                    }
+
+                    .plan{
+                        margin-left: 20px;
+                    }
+
+                    .veloz{
+                        margin-top: 15px;
+                        width: 116px;
+                        padding: 2px 4px;
+                        font-size: 11px;
+                        letter-spacing: -0.5px;
+                        border-radius: 8px;
+                    }
+
+                    .otros{
+                        margin-top: 8px;
+                        width: 116px;
+                        padding: 6px 4px;
+                        font-size: 11px;
+                        letter-spacing: -0.5px;
+                        border-radius: 2px;
+                    }
                 }
             `}</style>
         </section>

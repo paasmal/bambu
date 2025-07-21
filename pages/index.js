@@ -100,6 +100,11 @@ export default function Home() {
         }
 
         @media screen and (max-width: 768px){
+          .gonet{
+            position: relative;
+            width: 100%;
+            height: 300px;
+          }
         }
       `}</style>
     </AppLayout>

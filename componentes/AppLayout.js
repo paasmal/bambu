@@ -16,6 +16,12 @@ export default function AppLayout({ pagina, children }) {
             <main>
                 {children}
             </main>
+
+            <style jsx>{`
+                main{
+                    overflow-x: hidden;
+                }
+            `}</style>
             
             <style jsx global>{`
                 html,

@@ -30,7 +30,6 @@ export default function Subhero(){
             <style jsx>{`
                 .top-bar{
                     position: relative;
-                    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
                     background: #A7F0BA;
                     margin-left: 40%;
                     width: 60%;
@@ -62,7 +61,6 @@ export default function Subhero(){
                     padding: 0 14px;
                     color: #008F39;
                     font-size: 16px;
-                    font-weight: 400;
                     text-align: center;
                     display: flex;
                     align-items: center;
@@ -77,6 +75,43 @@ export default function Subhero(){
                 }
 
                 @media screen and (max-width: 768px){
+                    .top-bar{
+                        margin-left: 40%;
+                        width: 60%;
+                        height: 4px;
+                    }
+
+                    .cont{
+                        height: auto;
+                        padding: 20px 16px;
+                        flex-wrap: wrap;
+                    }
+
+                    .bottom-bar{
+                        width: 60%;
+                        height: 4px;
+                    }
+
+                    .item{
+                        height: 52px;
+                        width: calc((100vw - 46px) / 2);
+                        padding: 0 12px;
+                        font-size: 13px;
+                        border-radius: 8px;
+                    }
+
+                    p{
+                        margin-left: 8px;
+                        font-weight: 400;
+                    }
+
+                    .item:first-child, .item:nth-child(2){
+                        margin-bottom: 14px;
+                    }
+
+                    .item:first-child, .item:nth-child(3){
+                        margin-right: 14px;
+                    }
                 }
             `}</style>
         </section>

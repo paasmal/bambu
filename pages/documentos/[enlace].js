@@ -34,6 +34,12 @@ export default function Documento(){
 
     useEffect(() => {
         if(enlace == 'calidad-internet') SetName('Parametros de calidad de internet')
+        if(enlace == 'adulto-mayor') SetName('Resolución Arcotel-2021-1024 / Adulto mayor')
+        if(enlace == 'resolucion-arcotel') SetName('Resolución Arcotel 2022-0123')
+        if(enlace == 'resolucion-parental') SetName('Resolución guia control parental')
+        if(enlace == 'guia-parental') SetName('Recomendaciones para configuración del control parental')
+        if(enlace == 'senadi') SetName('Disposiciones SENADI')
+        if(enlace == 'seguridad-informatica') SetName('Guia de seguridad informática UNODC')
    
     }, [enlace])
 
@@ -41,11 +47,13 @@ export default function Documento(){
         <AppLayout>
             <Header />
             <div className='cont'>
-                <div className='atras' onClick={() => router.back()}>
-                    <Atras />
+                <div className='cont-title'>
+                    <div className='atras' onClick={() => router.back()}>
+                        <Atras />
+                    </div>
+                    <p className='title'>{name ? name : ''}</p>
                 </div>
                 <div className='main'>
-                    <p className='title'>{name ? name : ''}</p>
                     {
                         enlace && 
                         <div className='cont-pdf'>
@@ -79,6 +87,9 @@ export default function Documento(){
             <style jsx>{`
                 .cont{
                     margin: 25px 82px 50px 82px;
+                }
+
+                .cont-title{
                     display: flex;
                     align-items: flex-start;
                 }
@@ -99,7 +110,6 @@ export default function Documento(){
                     position: relative;
                     font-size: 20px;
                     font-weight: 400;
-                    z-index: 4;
                 }
 
                 .main{
@@ -107,10 +117,37 @@ export default function Documento(){
                 }
 
                 .cont-pdf{
-                    position: relative;
-                    background: white;
                     margin-top: 25px;
                     width: 100%;
+                }
+
+                @media screen and (max-width: 768px){
+                    .cont{
+                        margin: 20px 15px 40px 15px;
+                    }
+
+                    .atras{
+                        margin-right: 10px;
+                        padding: 0;
+                        border-radius: 0;
+                    }
+
+                    .atras:hover{
+                        background: white;
+                    }
+
+                    .title{
+                        font-size: 18px;
+                    }
+
+                    .main{
+                        width: calc(100vw - 30px);
+                    }
+
+                    .cont-pdf{
+                        margin-top: 25px;
+                        width: 100%;
+                    }
                 }
             `}</style>
         </AppLayout>

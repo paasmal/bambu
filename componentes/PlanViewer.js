@@ -62,7 +62,42 @@ export default function PlanViewer({ ancho, precio, main }){
                     font-size: ${main ? '16px' : '15px'};
                 }
 
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 640px){
+                    .band{
+                        font-size: ${main ? '76px' : '70px'};
+                        font-weight: 700;
+                        letter-spacing: -4px;
+                    }
+
+                    .cont-price{
+                        margin-top: 10px;
+                    }
+
+                    .pm{
+                        padding: ${main ? '3px 5px' : '2px 4px'};
+                        font-size: ${main ? '9px' : '8px'};
+                        border-radius: 4px;
+                    }
+
+                    .price{
+                        margin-left: 3px;
+                    }
+
+                    .high{
+                        margin-top: -4px;
+                        font-size: ${main ? '40px' : '34px'};
+                        letter-spacing: -3px;
+                    }
+
+                    .ctvs{
+                        margin-left: 3px;
+                        font-size: ${main ? '15px' : '14px'};
+                    }
+
+                    .imp{
+                        margin-left: 3px;
+                        font-size: ${main ? '11px' : '10px'};
+                    }
                 }
             `}</style>
         </article>

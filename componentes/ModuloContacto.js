@@ -127,6 +127,27 @@ export default function ModuloContacto({ reference }){
                 }
 
                 @media screen and (max-width: 768px){
+                    .contacto{
+                        margin-top: 30px;
+                        padding: 0 20px 30px 20px;
+                    }
+
+                    .title{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    .subtitle{
+                        margin-top: 5px;
+                        color: black;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    form{
+                        position: relative;
+                        margin: 25px 0px 60px 0px;
+                    }
                 }
             `}</style>
         </section>
