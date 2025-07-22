@@ -139,8 +139,8 @@ export default function Planes({ reference }){
                     }
 
                     .title{
-                        font-size: 18px;
-                        font-weight: 700;
+                        font-size: 19px;
+                        font-weight: 700
                     }
 
                     .cont-planes{

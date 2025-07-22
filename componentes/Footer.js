@@ -144,6 +144,10 @@ export default function Footer() {
                     .der{
                         margin-bottom: 30px;
                     }
+
+                    .t1{
+                        font-size: 19px;
+                    }
                 }
             `}</style>
         </footer>

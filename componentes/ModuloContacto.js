@@ -57,8 +57,7 @@ export default function ModuloContacto({ reference }){
                 }
                 
                 .contacto{
-                    margin-top: 50px;
-                    padding: 0 150px 60px 150px;
+                    padding: 50px 150px 55px 150px;
                 }
 
                 .title{
@@ -76,7 +75,7 @@ export default function ModuloContacto({ reference }){
 
                 form{
                     position: relative;
-                    margin: 25px 100px 50px 100px;
+                    margin-top: 25px;
                 }
 
                 .datos{
@@ -105,13 +104,13 @@ export default function ModuloContacto({ reference }){
 
                 button{
                     background: black;
-                    position: absolute;
-                    right: 0;
                     margin-top: 10px;
+                    margin: 5px 0 0 calc(100% - 150px);
+                    width: 150px;
                     padding: 10px 20px;
                     color: white;
                     font-size: 16px;
-                    font-weight: bold;
+                    font-weight: 700;
                     border-radius: 8px;
                     border: none;
                     outline: none;
@@ -128,25 +127,46 @@ export default function ModuloContacto({ reference }){
 
                 @media screen and (max-width: 768px){
                     .contacto{
-                        margin-top: 30px;
-                        padding: 0 20px 30px 20px;
+                        margin-top: 0px;
+                        padding: 35px 20px 40px 20px;
                     }
 
                     .title{
-                        font-size: 20px;
-                        font-weight: 700;
+                        font-size: 19px;
                     }
 
                     .subtitle{
-                        margin-top: 5px;
-                        color: black;
-                        font-size: 16px;
-                        font-weight: 300;
+                        margin-top: 6px;
+                        font-size: 15px;
                     }
 
                     form{
+                        margin-top: 25px;
+                    }
+
+                    .datos{
+                        font-size: 16px;
+                        margin-bottom: 15px;
+                    }
+
+                    label{
+                        color: black;
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                    }
+
+                    input, textarea{
+                        background: #F9F9F9;
+                        padding: 6px 7px;
+                        border: 1px solid #BBB;
+                        border-radius: 2px;
+                    }
+
+                    button{
                         position: relative;
-                        margin: 25px 0px 60px 0px;
+                        margin: 5px 0 0 calc(100% - 110px);
+                        width: 110px;
+                        padding: 10px 20px;
                     }
                 }
             `}</style>

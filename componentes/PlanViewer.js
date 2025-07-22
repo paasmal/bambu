@@ -70,12 +70,12 @@ export default function PlanViewer({ ancho, precio, main }){
                     }
 
                     .cont-price{
-                        margin-top: 10px;
+                        margin-top: 8px;
                     }
 
                     .pm{
                         padding: ${main ? '3px 5px' : '2px 4px'};
-                        font-size: ${main ? '9px' : '8px'};
+                        font-size: ${main ? '9px' : '9px'};
                         border-radius: 4px;
                     }
 
@@ -84,7 +84,7 @@ export default function PlanViewer({ ancho, precio, main }){
                     }
 
                     .high{
-                        margin-top: -4px;
+                        margin-top: -1px;
                         font-size: ${main ? '40px' : '34px'};
                         letter-spacing: -3px;
                     }
