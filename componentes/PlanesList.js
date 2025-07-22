@@ -77,7 +77,6 @@ export default function PlanesList(){
                     width: calc((100% - 90px)/ 4);
                     border: 1px solid #008F39;
                     border-radius: 12px;
-                    padding-bottom: 25px;
                 }
 
                 article:first-child{
@@ -85,23 +84,25 @@ export default function PlanesList(){
                 }
 
                 .desing{
+                    padding: 25px 22px 25px 22px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 }
 
                 .name{
-                    padding: 20px 0 25px 0;
-                    color: #008F39;
+                    background: #008F39;
+                    padding: 15px 0;
+                    color: white;
                     font-size: 18px;
                     font-weight: 500;
                     text-align: center;
+                    border-radius: 11px 11px 0 0;
                 }
 
                 .detalles{
                     margin-top: 32px;
                     width: 100%;
-                    padding: 0 25px;
                     color: #333;
                     font-size: 15px;
                     font-weight: 300;
@@ -119,18 +120,18 @@ export default function PlanesList(){
                     article{
                         margin-left: 0;
                         width: 100%;
-                        padding: 0 16px 25px 16px;
                         border: 1px solid #008F39;
                         border-radius: 12px;
                         margin-bottom: 22px;
                     }
 
                     .name{
-                        padding: 18px 0 16px 0;
+                        padding: 10px 0;
                         font-size: 18px;
                     }
 
                     .desing{
+                        padding: 20px 16px 22px 16px;
                         flex-direction: row;
                         justify-content: space-between;
                     }
@@ -142,9 +143,8 @@ export default function PlanesList(){
                     }
 
                     .detalles{
-                        width: calc(62% - 20px);
                         margin-top: 0;
-                        padding: 0;
+                        width: calc(62% - 20px);
                         font-size: 14px;
                     }
 

@@ -30,11 +30,11 @@ export default function PlanesPage(){
 
                 @media screen and (max-width: 768px){
                     section{
-                        padding: 20px 16px 20px 16px;
+                        padding: 16px 16px 16px 16px;
                     }
 
-                    .title{
-                        font-size: 19px;
+                    p{
+                        font-size: 20px;
                         margin-bottom: 20px;
                     }
 
