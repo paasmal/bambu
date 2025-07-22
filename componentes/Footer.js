@@ -31,7 +31,6 @@ export default function Footer() {
                     <Correo color='black' />
                     <p>info@bambu.ec</p>
                 </div>
-                <p className='test' onClick={() => router.push('/vtest')}>Medidor de Velocidad</p>
             </div>
             <div className='der'>
                 <p className='t1'>Normas y regulaciones</p>
@@ -46,6 +45,12 @@ export default function Footer() {
                 <p className='enlaces' onClick={() => router.push('/documentos/calidad-internet')}>Normas de calidad internet</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/abonados')}>Reglamento de abonados</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/contratos-adhesion')}>Normas técnicas de contratos de adhesión</p>
+            </div>
+            <div className='cont-test'>
+                <div className='bar-test'></div>
+                <div className='t-test'>
+                    <p className='test' onClick={() => router.push('/vtest')}>Medidor de Velocidad</p>
+                </div>
             </div>
             
             <style jsx>{`
@@ -117,7 +122,7 @@ export default function Footer() {
                 }
 
                 .test{
-                    margin: 25px 0 0 10px;
+                    /* margin: 25px 0 0 10px;
                     width: 190px;
                     background: #777;
                     padding: 5px 10px;
@@ -125,15 +130,15 @@ export default function Footer() {
                     font-weight: 400;
                     text-align: center;
                     border-radius: 6px;
-                    cursor: pointer;
+                    cursor: pointer; */
                 }
 
                 @media screen and (max-width: 768px){
                     footer{
-                        margin-top: 20px;
+                        margin-top: 0;
                         height: auto;
                         width: 100%;
-                        padding: 16px;
+                        padding: 0 16px 20px 16px;
                         flex-direction: column-reverse;
                     }
 
@@ -147,6 +152,40 @@ export default function Footer() {
 
                     .t1{
                         font-size: 19px;
+                    }
+
+                    .cont-test{
+                        position: relative;
+                        height: 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    .bar-test{
+                        position: absolute;
+                        top: 20px;
+                        left: -16px;
+                        right: -16px;
+                        border: .5px solid #008F39;
+                    }
+
+                    .t-test{
+                        background: #FFF;
+                        position: absolute;
+                        left: calc(50% - 105px);
+                        padding: 5px;
+                        border: 1px solid #008F39;
+                        border-radius: 20px;
+                    }
+
+                    .test{
+                        background: #777;
+                        width: 200px;
+                        line-height: 30px;
+                        color: white;
+                        font-weight: 400;
+                        text-align: center;
+                        border-radius: 15px;
+                        cursor: pointer;
                     }
                 }
             `}</style>

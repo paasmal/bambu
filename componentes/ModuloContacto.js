@@ -168,6 +168,10 @@ export default function ModuloContacto({ reference }){
                         width: 110px;
                         padding: 10px 20px;
                     }
+
+                    .bottom-bar{
+                        display: none;
+                    }
                 }
             `}</style>
         </section>
