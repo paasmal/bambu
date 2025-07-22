@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import Menu from './icons/Menu'
 
-export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, gonet }) {
+export default function Header({ noHome, onScrollPlanes, onScrollContacto, onOpenGonet, gonet }) {
     const router = useRouter()
     const [equis, setEquis] = useState(false)
 
@@ -16,7 +16,7 @@ export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, 
             }
             <nav>
                 <p>BAMBU</p>
-                <p onClick={onScrollPlanes}>PLANES</p>
+                <p onClick={onScrollPlanes} style={{ color: router.route == '/planes' ? '#008F39' : 'black'}}>PLANES</p>
                 <p onClick={onScrollContacto}>CONTACTO</p>
                 <p onClick={onOpenGonet}>GONET</p>
                 <p>CALIDAD</p>

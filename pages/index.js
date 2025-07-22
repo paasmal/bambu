@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
@@ -11,6 +12,7 @@ import Footer from '../componentes/Footer'
 export default function Home() {
   const planesRef = useRef(null)
   const contactoRef = useRef(null)
+  const router = useRouter()
   const [gonet, setGonet] = useState(false)
 
   const handleScroll = () => {
@@ -36,7 +38,7 @@ export default function Home() {
   return (
     <AppLayout>
         <Header
-          onScrollPlanes={() => scrollToPlanes()}
+          onScrollPlanes={() => router.push('/planes')}
           onScrollContacto={() => scrollToContacto()}
           onOpenGonet={() => setGonet(!gonet)}
           gonet={gonet}

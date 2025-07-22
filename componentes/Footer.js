@@ -67,8 +67,12 @@ export default function Footer() {
                     align-items: center;   */
                 }
 
-                .izq, .der{
-                    width: 50%;
+                .izq{
+                    width: 40%;
+                }
+
+                .der{
+                    width: calc(60% - 200px);
                 }
 
                 .logo{
@@ -122,15 +126,14 @@ export default function Footer() {
                 }
 
                 .test{
-                    /* margin: 25px 0 0 10px;
-                    width: 190px;
-                    background: #777;
-                    padding: 5px 10px;
+                    background: #888;
+                    width: 200px;
+                    line-height: 40px;
                     color: white;
                     font-weight: 400;
                     text-align: center;
-                    border-radius: 6px;
-                    cursor: pointer; */
+                    border-radius: 15px;
+                    cursor: pointer;
                 }
 
                 @media screen and (max-width: 768px){
@@ -144,6 +147,16 @@ export default function Footer() {
 
                     .izq, .der{
                         width: 100%;
+                    }
+
+                    .logo{
+                        margin-left: -5px;
+                        margin-bottom: 24px;
+                    }
+
+                    .contacto{
+                        margin-left: 0;
+                        margin-bottom: 6px;
                     }
 
                     .der{
@@ -178,7 +191,6 @@ export default function Footer() {
                     }
 
                     .test{
-                        background: #777;
                         width: 200px;
                         line-height: 30px;
                         color: white;
