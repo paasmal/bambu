@@ -29,7 +29,7 @@ export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, 
             <div className='mobile-nav'>
                 <p 
                     className='at-client'
-                    onClick={() => router.push('https://api.whatsapp.com/send?phone=593990011159&text=Hola')}
+                    onClick={() => router.push('https://api.whatsapp.com/send?phone=593990011159&text=Hola.')}
                 >Atención al Cliente</p>
                 <div className='po' onClick={() => setEquis(!equis)}>
                     <Menu equis={equis} />
