@@ -3,25 +3,37 @@ import FibraIcon from './icons/FibraIcon'
 import SoporteIcon from './icons/SoporteIcon'
 import DescuentoIcon from './icons/DescuentoIcon'
 
+import useScreenWidth from '../utils/useScreenWidth'
+
 export default function Subhero(){
+    const screenWidth = useScreenWidth()
+
     return(
         <section>
             <div className='top-bar'></div>
             <div className='cont'>
                 <div className='item'>
-                    <InstaIcon />
+                    <div className='icono'>
+                        <InstaIcon size={screenWidth > 768 ? 40 : 38} />
+                    </div>
                     <p>Instalación inmediata</p>
                 </div>
                 <div className='item'>
-                    <FibraIcon />
+                    <div className='icono'>
+                        <FibraIcon size={screenWidth > 768 ? 40 : 38} />
+                    </div>
                     <p>Conexión 100% fibra óptica</p>
                 </div>
                 <div className='item'>
-                    <SoporteIcon />
+                    <div className='icono'>
+                        <SoporteIcon size={screenWidth > 768 ? 40 : 38} />
+                    </div>
                     <p>Soporte 24 horas</p>
                 </div>
                 <div className='item'>
-                    <DescuentoIcon />
+                    <div className='icono'>
+                        <DescuentoIcon size={screenWidth > 768 ? 40 : 38} />
+                    </div>
                     <p>100% descuento en la instalación</p>
                 </div>
             </div>
@@ -42,7 +54,7 @@ export default function Subhero(){
                     background-image: repeating-linear-gradient(-45deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);
                     width: 100%;
                     height: 130px;
-                    padding: 0 180px;
+                    padding: 0 150px;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -57,19 +69,18 @@ export default function Subhero(){
                 .item{
                     background: white;
                     height: 60px;
-                    width: 205px;
-                    padding: 0 14px;
+                    width: 220px;
+                    padding: 0 16px;
                     color: #008F39;
                     font-size: 16px;
                     text-align: center;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
                     border-radius: 10px;
                 }
 
                 p{
-                    margin-left: 10px;
+                    margin-left: 12px;
                     font-weight: 500;
                     text-align: left;
                 }
@@ -83,7 +94,7 @@ export default function Subhero(){
 
                     .cont{
                         height: auto;
-                        padding: 20px 16px;
+                        padding: 18px 16px;
                         flex-wrap: wrap;
                     }
 
@@ -93,11 +104,11 @@ export default function Subhero(){
                     }
 
                     .item{
-                        height: 52px;
+                        height: 48px;
                         width: calc((100vw - 46px) / 2);
                         padding: 0 12px;
                         font-size: 13px;
-                        border-radius: 8px;
+                        border-radius: 6px;
                     }
 
                     p{

@@ -1,10 +1,11 @@
-export default function InstaIcon(props){
+export default function InstaIcon({ size = 40 }){
     return(
         <svg
-            width={50}
-            height={50}
-            viewBox='0 0 28 28'
+            width={size}
+            height={size}
+            viewBox='0.5 1 27 27'
             strokeWidth={1}
+            style={{ display: 'block' }}
         >
             <path
                 fill='black'

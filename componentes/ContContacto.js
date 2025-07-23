@@ -14,10 +14,11 @@ export default function ContContacto({ reference }){
 
             <style jsx>{`
                 .top-bar{
-                    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
                     background: #A7F0BA;
+                    background: #008F39;
+                    background-image: repeating-linear-gradient(-45deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);
                     width: 60%;
-                    height: 5px;
+                    height: 6px;
                 }
                 
                 .contacto{

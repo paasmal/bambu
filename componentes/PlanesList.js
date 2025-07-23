@@ -75,8 +75,8 @@ export default function PlanesList(){
                 article{
                     margin-left: 30px;
                     width: calc((100% - 90px)/ 4);
-                    border: 1px solid #008F39;
                     border-radius: 12px;
+                    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
                 }
 
                 article:first-child{
@@ -92,6 +92,7 @@ export default function PlanesList(){
 
                 .name{
                     background: #008F39;
+                    background-image: repeating-linear-gradient(-45deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1) 15px, transparent 0, transparent 30px);
                     padding: 15px 0;
                     color: white;
                     font-size: 18px;
@@ -120,7 +121,6 @@ export default function PlanesList(){
                     article{
                         margin-left: 0;
                         width: 100%;
-                        border: 1px solid #008F39;
                         border-radius: 12px;
                         margin-bottom: 22px;
                     }

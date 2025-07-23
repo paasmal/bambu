@@ -1,10 +1,11 @@
-export default function DescuentoIcon(){
+export default function DescuentoIcon({ size = 40 }){
     return(
         <svg
-            width={65}
-            height={65}
+            width={size}
+            height={size}
             fill='none'
             viewBox='0 0 24 24'
+            style={{ display: 'block' }}
         >
             <path
                 stroke='black'
