@@ -6,7 +6,7 @@ export default function Trafico(){
         <AppLayout>
             <Header />
             <section>
-                <iframe src="http://131.161.221.23:3333/d-solo/f26e2576-0f9e-4a82-aad7-2b658eb11a49/olt-machangara?orgId=1&refresh=30s&from=1753280511310&to=1753302111310&theme=light&panelId=3" width="450" height="200" frameborder="0"></iframe>
+                <iframe src="http://131.161.221.23:3333/d-solo/f26e2576-0f9e-4a82-aad7-2b658eb11a49/olt-machangara?orgId=1&refresh=30s&from=1753280511310&to=1753302111310&theme=light&panelId=3" width="100%" height="400" frameborder="0"></iframe>
             </section>
 
             <style jsx>{`
