@@ -5,7 +5,7 @@ import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
 import Hero from '../componentes/Hero'
 import Subhero from '../componentes/Subhero'
-import Planes from '../componentes/Planes'
+import ContPlanes from '../componentes/ContPlanes'
 import ContContacto from '../componentes/ContContacto'
 import Footer from '../componentes/Footer'
 
@@ -45,7 +45,7 @@ export default function Home() {
         />
         <Hero onScrollPlanes={() => scrollToPlanes()} />
         <Subhero />
-        <Planes reference={planesRef} />
+        <ContPlanes reference={planesRef} />
         <ContContacto reference={contactoRef} />
         <Footer />
         <div className='cont-gonet'>

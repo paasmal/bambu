@@ -84,7 +84,7 @@ export default function PlanesList(){
                 }
 
                 .desing{
-                    padding: 25px 22px 25px 22px;
+                    padding: 22px 22px 22px 22px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;

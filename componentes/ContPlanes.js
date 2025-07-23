@@ -1,6 +1,6 @@
 import PlanesList from './PlanesList'
 
-export default function Planes({ reference }){
+export default function ContPlanes({ reference }){
     return(
         <section ref={reference}>
             <p className='title'>Elige tu plan:</p>
@@ -11,7 +11,7 @@ export default function Planes({ reference }){
 
             <style jsx>{`
                 section{
-                    padding: 50px 150px 60px 150px;
+                    padding: 70px 150px 80px 150px;
                 }
 
                 .title{
@@ -20,7 +20,7 @@ export default function Planes({ reference }){
                 }
 
                 .cont-planes{
-                    margin-top: 30px;
+                    margin-top: 35px;
                     display: flex;
                 }
 
