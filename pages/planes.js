@@ -1,6 +1,7 @@
 import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
 import PlanesList from '../componentes/PlanesList'
+import Footer from '../componentes/Footer'
 
 export default function PlanesPage(){
     return(
@@ -12,6 +13,7 @@ export default function PlanesPage(){
                     <PlanesList />
                 </div>
             </section>
+            <Footer />
 
             <style jsx>{`
                 section{

@@ -39,7 +39,7 @@ export default function Home() {
     <AppLayout>
         <Header
           onScrollPlanes={() => router.push('/planes')}
-          onScrollContacto={() => scrollToContacto()}
+          onScrollContacto={() => router.push('/contacto')}
           onOpenGonet={() => setGonet(!gonet)}
           gonet={gonet}
         />
@@ -106,6 +106,19 @@ export default function Home() {
             position: relative;
             width: 100%;
             height: 300px;
+          }
+
+          .clo{
+            top: 50px;
+            right: 14px;
+            background: #000;
+            border-radius: 8px;
+          }
+
+          .clo p{
+            width: 26px;
+            line-height: 26px;
+            font-size: 18px;
           }
         }
       `}</style>

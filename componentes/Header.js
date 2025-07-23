@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import Menu from './icons/Menu'
 
-export default function Header({ noHome, onScrollPlanes, onScrollContacto, onOpenGonet, gonet }) {
+export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, gonet }) {
     const router = useRouter()
     const [equis, setEquis] = useState(false)
 
@@ -17,12 +17,20 @@ export default function Header({ noHome, onScrollPlanes, onScrollContacto, onOpe
             <nav>
                 <p>BAMBU</p>
                 <p onClick={onScrollPlanes} style={{ color: router.route == '/planes' ? '#008F39' : 'black'}}>PLANES</p>
-                <p onClick={onScrollContacto}>CONTACTO</p>
-                <p onClick={onOpenGonet}>GONET</p>
+                <p onClick={onScrollContacto} style={{ color: router.route == '/contacto' ? '#008F39' : 'black'}}>CONTACTO</p>
+                <p 
+                    onClick={() => {onOpenGonet(), setEquis(false)}}
+                    style={{ display: router.route == '/' ? 'inline' : 'none'}}
+                >
+                    GONET
+                </p>
                 <p>CALIDAD</p>
             </nav>
             <div className='mobile-nav'>
-                <p className='at-client'>Atención al Cliente</p>
+                <p 
+                    className='at-client'
+                    onClick={() => router.push('https://api.whatsapp.com/send?phone=593990011159&text=Hola')}
+                >Atención al Cliente</p>
                 <div className='po' onClick={() => setEquis(!equis)}>
                     <Menu equis={equis} />
                 </div>
@@ -94,6 +102,7 @@ export default function Header({ noHome, onScrollPlanes, onScrollContacto, onOpe
                         flex-direction: column;
                         transition: 0.6s;
                         border-radius: 20px 0 0 20px;
+                        box-shadow: -3px 4px 6px rgba(0, 0, 0, 0.6);
                     }   
 
                     nav p{
