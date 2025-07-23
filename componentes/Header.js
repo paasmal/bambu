@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import Menu from './icons/Menu'
 
-export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, gonet }) {
+export default function Header({ onOpenGonet, gonet }) {
     const router = useRouter()
     const [equis, setEquis] = useState(false)
 
@@ -15,9 +15,9 @@ export default function Header({ onScrollPlanes, onScrollContacto, onOpenGonet, 
                     : <img onClick={() => router.push('/')} src='/logoGonet.png' alt='Gonet Logo' />
             }
             <nav>
-                <p>BAMBU</p>
-                <p onClick={onScrollPlanes} style={{ color: router.route == '/planes' ? '#008F39' : 'black'}}>PLANES</p>
-                <p onClick={onScrollContacto} style={{ color: router.route == '/contacto' ? '#008F39' : 'black'}}>CONTACTO</p>
+                <p onClick={() => router.push('/about')}>BAMBU</p>
+                <p onClick={() => router.push('/planes')} style={{ color: router.route == '/planes' ? '#008F39' : 'black'}}>PLANES</p>
+                <p onClick={() => router.push('/contacto')} style={{ color: router.route == '/contacto' ? '#008F39' : 'black'}}>CONTACTO</p>
                 <p 
                     onClick={() => {onOpenGonet(), setEquis(false)}}
                     style={{ display: router.route == '/' ? 'inline' : 'none'}}

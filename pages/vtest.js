@@ -1,8 +1,12 @@
+import { useRouter } from 'next/router'
+
 import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
 import Atras from '../componentes/icons/Atras'
 
 export default function VTest(){
+    const router = useRouter()
+
     return(
         <AppLayout>
             <Header />

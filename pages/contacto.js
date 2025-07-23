@@ -1,16 +1,20 @@
+import { useRouter } from 'next/router'
+
 import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
-import ModuloContacto from '../componentes/ModuloContacto'
+import Contacto from '../componentes/Contacto'
 import Footer from '../componentes/Footer'
 
 export default function ContactoPage(){
+    const router = useRouter()
+
     return(
         <AppLayout>
             <Header />
             <section>
                 <p>¿Tienes alguna duda? Escribenos</p>
                 <div>
-                    <ModuloContacto />
+                    <Contacto />
                 </div>
             </section>
             <Footer />
@@ -21,6 +25,7 @@ export default function ContactoPage(){
                 }
 
                 p{
+                    color: #008F39;
                     font-size: 26px;
                     font-weight: 700;
                     margin-bottom: 30px;
@@ -32,7 +37,7 @@ export default function ContactoPage(){
 
                 @media screen and (max-width: 768px){
                     section{
-                        padding: 16px 16px 16px 16px;
+                        padding: 16px 16px 40px 16px;
                     }
 
                     p{

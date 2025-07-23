@@ -6,7 +6,7 @@ import Header from '../componentes/Header'
 import Hero from '../componentes/Hero'
 import Subhero from '../componentes/Subhero'
 import Planes from '../componentes/Planes'
-import ModuloContacto from '../componentes/ModuloContacto'
+import ContContacto from '../componentes/ContContacto'
 import Footer from '../componentes/Footer'
 
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
         <Hero onScrollPlanes={() => scrollToPlanes()} />
         <Subhero />
         <Planes reference={planesRef} />
-        <ModuloContacto reference={contactoRef} />
+        <ContContacto reference={contactoRef} />
         <Footer />
         <div className='cont-gonet'>
           <div className='gonet'>

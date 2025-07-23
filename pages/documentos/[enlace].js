@@ -45,9 +45,7 @@ export default function Documento(){
 
     return(
         <AppLayout>
-            <Header
-                onScrollPlanes={() => router.push('/planes')}
-            />
+            <Header />
             <div className='cont'>
                 <div className='cont-title'>
                     <div className='atras' onClick={() => router.back()}>

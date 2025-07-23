@@ -167,6 +167,10 @@ export default function Footer() {
                         font-size: 19px;
                     }
 
+                    .enlaces{
+                        font-size: 16px;
+                    }
+
                     .cont-test{
                         position: relative;
                         height: 30px;
