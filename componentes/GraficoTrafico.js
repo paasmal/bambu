@@ -52,6 +52,22 @@ const formatTrafficValue = (valueInMbps) => {
   return `${valueInMbps.toFixed(2)} Mb/s`
 }
 
+const formatXAxisTick = (tickItem) => {
+  const date = new Date(tickItem); // Convierte la cadena de fecha a objeto Date
+  return (
+    <g>
+      {/* Texto para el día y mes */}
+      <text x={0} y={0} dy={-5} textAnchor="middle" fill="#666" fontSize={12}>
+        {date.toLocaleString('es-EC', { month: 'short', day: 'numeric' })}
+      </text>
+      {/* Texto para la hora y minuto */}
+      <text x={0} y={0} dy={10} textAnchor="middle" fill="#666" fontSize={12}>
+        {date.toLocaleString('es-EC', { hour: '2-digit', minute: '2-digit', hour12: false })}
+      </text>
+    </g>
+  );
+};
+
 export default function GraficoTrafico(){
   const [chartData, setChartData] = useState([])
   const [loading, setLoading] = useState(true)
@@ -94,7 +110,7 @@ export default function GraficoTrafico(){
               return {
                 // Formatear la fecha/hora para el eje X
                 name: new Date(row.Fecha).toLocaleString('es-EC', { 
-                  day: 'numeric', month: 'numeric', year: 'numeric',
+                  day: 'numeric', month: 'short', /* year: 'numeric', */
                   hour: '2-digit', minute: '2-digit', hour12: false
                 }),
                 // Parsear y convertir a Mb/s las columnas de uso
@@ -130,17 +146,26 @@ export default function GraficoTrafico(){
   if (chartData.length === 0) return <div>No hay datos disponibles en el CSV para el gráfico.</div>
 
   return (
-    <div style={{ width: '100%', height: '400px' }}>
+    <div style={{ width: '100%', height: '420px' }}>
       <ResponsiveContainer width='100%' height='100%'>
         <LineChart
           data={chartData}
-          margin={{ top: 15, right: 15, left: 5, bottom: 10 }}
+          margin={{ top: 15, /* right: 15, left: 15, bottom: 35 */ }}
         >
           <CartesianGrid strokeDasharray='3 3' />
-          <XAxis dataKey='name' />
-          <YAxis tickFormatter={formatTrafficValue} />
+          <XAxis
+            dataKey='name'
+            /* angle={-60}
+            textAnchor="end"
+            height={30} */
+            
+            tick={{ fontSize: 12 }}
+          />
+          <YAxis tickFormatter={formatTrafficValue} tick={{ fontSize: 12 }} />
           <Tooltip formatter={formatTrafficValue} />
-          <Legend />
+          <div style={{ opacity: '0' }}>
+            <Legend /* verticalAlign="top" */ />
+          </div>
 
           <Line
             type="monotone"
