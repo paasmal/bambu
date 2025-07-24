@@ -53,21 +53,31 @@ export default function Trafico(){
                 .main{
                     margin-top: 30px;
                     width: 100%;
+                    height: 420px;
                 }
 
                 @media screen and (max-width: 768px){
                     section{
-                        padding: 30px 16px 20px 16px;
+                        margin: 20px 16px 40px 16px;
                     }
 
-                    p{
-                        font-size: 19px;
-                        font-weight: 700
+                    .atras{
+                        margin-right: 10px;
+                        padding: 0;
+                        border-radius: 0;
                     }
 
-                    .cont-planes{
-                        margin-top: 20px;
-                        flex-direction: column;
+                    .atras:hover{
+                        background: white;
+                    }
+
+                    .title{
+                        font-size: 18px;
+                    }
+
+                    .main{
+                        width: calc(100vw - 30px);
+                        height: 300px;
                     }
                 }
             `}</style>

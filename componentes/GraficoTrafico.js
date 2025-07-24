@@ -74,7 +74,7 @@ export default function GraficoTrafico(){
   const [error, setError] = useState(null)
 
   //Capacidad contratada
-  const CONTRATADA_VALUE_GBPS = 2.4
+  const CONTRATADA_VALUE_GBPS = 2.1
   const CONSTANT_CAPACITY_MBPS = parseTrafficValue(`${CONTRATADA_VALUE_GBPS} Gb/s`)
 
   useEffect(() => {
@@ -146,11 +146,11 @@ export default function GraficoTrafico(){
   if (chartData.length === 0) return <div>No hay datos disponibles en el CSV para el gráfico.</div>
 
   return (
-    <div style={{ width: '100%', height: '420px' }}>
+    <>
       <ResponsiveContainer width='100%' height='100%'>
         <LineChart
           data={chartData}
-          margin={{ top: 15, /* right: 15, left: 15, bottom: 35 */ }}
+          margin={{ top: 10, left: -15/* right: 15, left: 15, bottom: 35 */ }}
         >
           <CartesianGrid strokeDasharray='3 3' />
           <XAxis
@@ -158,7 +158,6 @@ export default function GraficoTrafico(){
             /* angle={-60}
             textAnchor="end"
             height={30} */
-            
             tick={{ fontSize: 12 }}
           />
           <YAxis tickFormatter={formatTrafficValue} tick={{ fontSize: 12 }} />
@@ -195,6 +194,6 @@ export default function GraficoTrafico(){
           />
         </LineChart>
       </ResponsiveContainer>
-    </div>
+    </>
   )
 }

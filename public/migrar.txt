@@ -1,0 +1,87 @@
+interface gpon-olt_1/4/4
+  onu 16 type CDATA-1GE sn D011E6CA192B
+  onu 16 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:16
+  name 000176 JOHNNY PATRICIO VILLAVICENCIO PAZMINO
+  description NAP:CI1A07 P2 IP:10.107.36.16
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 17 type CDATA-1GE sn D011E6CA268D
+  onu 17 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:17
+  name 000372 FERNANDO RENE CARDENAS ALVAREZ
+  description NAP:CI1A07 PCajaNueva IP:10.107.36.17
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 18 type CDATA-1GE sn D011E6CA2665
+  onu 18 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:18
+  name 000121 ANA EULALIA ORTIZ PINO
+  description NAP:CI1A08 Px IP:10.107.36.18
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 19 type CDATA-1GE sn D011E6CA1E91
+  onu 19 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:19
+  name 000312 JOSE RAUL ORTIZ BRAVO
+  description NAP:CI1A08 Px IP:10.107.36.19
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 20 type CDATA-1GE sn D011E6CA21DB
+  onu 20 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:20
+  name 000328 SARA ALEXANDRA LOPEZ MENDIETA
+  description NAP:CI1A08 P3 IP:10.107.36.20
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 21 type CDATA-1GE sn D0116A00673A
+  onu 21 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:21
+  name 000355 JORGE OLMEDO MENESES ZEAS
+  description NAP:CI1A08 P4 IP:10.107.36.21
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 22 type CDATA-1GE sn D0121D8E9104
+  onu 22 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:22
+  name 001008 ANA PATRICIA ANDRADE PADRON
+  description NAP:CI1A08 P5 IP:10.107.36.22
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 23 type CDATA-1GE sn D0121D8E9194
+  onu 23 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:23
+  name 000999 MARIA ELVIRA ANDRADE PERALTA
+  description NAP:CI1A08 P5 IP:10.107.36.23
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!

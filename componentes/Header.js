@@ -15,7 +15,7 @@ export default function Header({ onOpenGonet, gonet }) {
                     : <img onClick={() => router.push('/')} src='/logoGonet.png' alt='Gonet Logo' />
             }
             <nav>
-                <p onClick={() => router.push('/about')}>BAMBU</p>
+                <p onClick={() => router.push('/')}>BAMBU</p>
                 <p onClick={() => router.push('/planes')} style={{ color: router.route == '/planes' ? '#008F39' : 'black'}}>PLANES</p>
                 <p onClick={() => router.push('/contacto')} style={{ color: router.route == '/contacto' ? '#008F39' : 'black'}}>CONTACTO</p>
                 <p 

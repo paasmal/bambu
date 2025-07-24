@@ -41,6 +41,10 @@ export default function Contacto(){
             <button>Enviar</button>
 
             <style jsx>{`
+                form{
+                    width: 100%;
+                }
+
                 .datos{
                     font-size: 17px;
                     display: flex;

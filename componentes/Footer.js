@@ -35,7 +35,7 @@ export default function Footer() {
             <div className='der'>
                 <p className='t1'>Normas y regulaciones</p>
                 <p className='enlaces' onClick={() => window.open('https://www.arcotel.gob.ec/')}>Arcotel</p>
-                <p className='enlaces' onClick={() => router.push('/trafico')}>Trafico</p>
+                <p className='enlaces' onClick={() => router.push('/trafico')}>Capacidad Internacional</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/guia-parental')}>Guia control parental (Arcotel)</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-parental')}>Resolución guia control parental</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-arcotel')}>Resolución Arcotel 2022-0123</p>
