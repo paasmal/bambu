@@ -1,7 +1,8 @@
 import AppLayout from '../componentes/AppLayout'
 import Header from '../componentes/Header'
 import Atras from '../componentes/icons/Atras'
-import CsvLineChart from '../componentes/CsvLineChart'
+import GraficoTrafico from '../componentes/GraficoTrafico'
+import Footer from '../componentes/Footer'
 
 export default function Trafico(){
 
@@ -16,13 +17,14 @@ export default function Trafico(){
                     <p className='title'>Capacidad Internacional</p>
                 </div>
                 <div className='main'>
-                    <CsvLineChart />
+                    <GraficoTrafico />
                 </div>
             </section>
+            <Footer />
 
             <style jsx>{`
                 section{
-                    margin: 25px 82px 50px 82px;
+                    margin: 25px 80px 50px 80px;
                 }
 
                 .cont-title{
