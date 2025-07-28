@@ -36,6 +36,7 @@ export default function Footer() {
                 <p className='t1'>Normas y regulaciones</p>
                 <p className='enlaces' onClick={() => window.open('https://www.arcotel.gob.ec/')}>Arcotel</p>
                 <p className='enlaces' onClick={() => router.push('/trafico')}>Capacidad Internacional</p>
+                <p className='enlaces' onClick={() => router.push('/documentos/parametros')}>Parametros de calidad</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/guia-parental')}>Guia control parental (Arcotel)</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-parental')}>Resolución guia control parental</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/resolucion-arcotel')}>Resolución Arcotel 2022-0123</p>
@@ -44,13 +45,13 @@ export default function Footer() {
                 <p className='enlaces' onClick={() => router.push('/documentos/adulto-mayor')}>Ley adulto mayor</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/ley-discapacidades')}>Ley organica de discapacidades</p>
                 <p className='enlaces' onClick={() => router.push('/documentos/calidad-internet')}>Normas de calidad internet</p>
-                <p className='enlaces' onClick={() => router.push('/documentos/abonados')}>Reglamento de abonados</p>
-                <p className='enlaces' onClick={() => router.push('/documentos/contratos-adhesion')}>Normas técnicas de contratos de adhesión</p>
+                {/* <p className='enlaces' onClick={() => router.push('/documentos/abonados')}>Reglamento de abonados</p>
+                <p className='enlaces' onClick={() => router.push('/documentos/contratos-adhesion')}>Normas técnicas de contratos de adhesión</p> */}
             </div>
             <div className='cont-test'>
                 <div className='bar-test'></div>
                 <div className='t-test'>
-                    <p className='test' onClick={() => router.push('/vtest')}>Medidor de Velocidad</p>
+                    <p className='test' onClick={() => window.open('https://fast.com/es/')}>Medidor de Velocidad</p>
                 </div>
             </div>
             

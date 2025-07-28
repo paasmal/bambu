@@ -85,3 +85,25 @@ interface gpon-onu_1/4/4:23
   description NAP:CI1A08 P5 IP:10.107.36.23
   service-port 1 vport 1 user-vlan 2262 vlan 2262
 !
+
+interface gpon-olt_1/4/4
+  onu 24 type CDATA-1GE sn D0116A673797
+  onu 24 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:24
+  name 000495 GLADYS ELIZABETH ALVEAR ZAMORA
+  description NAP:CI1A07 Px IP:10.107.36.24
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!
+
+interface gpon-olt_1/4/4
+  onu 25 type CDATA-1GE sn D0116A6717E7
+  onu 25 profile line PLAN_STAND_GONET remote PON2262
+!
+
+interface gpon-onu_1/4/4:25
+  name 000831 SARA CAROLINA SALAMEA MOSCOSO
+  description NAP:CI1A07 Px IP:10.107.36.25
+  service-port 1 vport 1 user-vlan 2262 vlan 2262
+!

@@ -33,6 +33,7 @@ export default function Documento(){
     /* const renderPage = props => <CustomPageLayer renderPageProps={props} /> */
 
     useEffect(() => {
+        if(enlace == 'parametros') SetName('Parametros de calidad de internet')
         if(enlace == 'calidad-internet') SetName('Parametros de calidad de internet')
         if(enlace == 'adulto-mayor') SetName('Resolución Arcotel-2021-1024 / Adulto mayor')
         if(enlace == 'resolucion-arcotel') SetName('Resolución Arcotel 2022-0123')
