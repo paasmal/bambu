@@ -5,11 +5,11 @@ import Horario from './icons/Horario'
 import Telefono from './icons/Telefono'
 import Correo from './icons/Correo'
 
-export default function Footer() {
+export default function Footer({ reference }) {
     const router = useRouter()
 
     return (
-        <footer>
+        <footer ref={reference}>
             <div className='izq'>
                 <div className='logo'>
                     <img  className='img1' src='/logoSoloPanda.jpg' />

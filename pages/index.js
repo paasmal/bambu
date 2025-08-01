@@ -12,6 +12,7 @@ import Footer from '../componentes/Footer'
 export default function Home() {
   const planesRef = useRef(null)
   const contactoRef = useRef(null)
+  const footerRef = useRef(null)
   const router = useRouter()
   const [gonet, setGonet] = useState(false)
 
@@ -35,6 +36,10 @@ export default function Home() {
     contactoRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const scrollToFooter = () => {
+    footerRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <AppLayout>
         <Header
@@ -42,12 +47,13 @@ export default function Home() {
           onScrollContacto={() => router.push('/contacto')}
           onOpenGonet={() => setGonet(!gonet)}
           gonet={gonet}
+          onScrollFooter={scrollToFooter}
         />
         <Hero onScrollPlanes={() => scrollToPlanes()} />
         <Subhero />
         <ContPlanes reference={planesRef} />
         <ContContacto reference={contactoRef} />
-        <Footer />
+        <Footer reference={footerRef} />
         <div className='cont-gonet'>
           <div className='gonet'>
             <img src='/portada-gonet.png' />

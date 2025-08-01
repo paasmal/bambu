@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import Menu from './icons/Menu'
 
-export default function Header({ onOpenGonet, gonet }) {
+export default function Header({ onOpenGonet, gonet, onScrollFooter }) {
     const router = useRouter()
     const [equis, setEquis] = useState(false)
 
@@ -24,7 +24,7 @@ export default function Header({ onOpenGonet, gonet }) {
                 >
                     GONET
                 </p>
-                <p>CALIDAD</p>
+                <p onClick={onScrollFooter}>INFORMACIÓN</p>
             </nav>
             <div className='mobile-nav'>
                 <p 
