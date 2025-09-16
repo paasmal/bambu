@@ -8,14 +8,15 @@ export default function PlanesList(){
                 <div className='desing'>
                     <div className='plan'>
                         <PlanViewer
-                            ancho='300'
+                            ancho='600'
                             precio={[19, 90]}
                         />
                     </div>
                     <div className='detalles'>
-                        <p>• 300 megas por siempre</p>
+                        <p>• 600 megas por siempre</p>
                         <p>• Incluye Router WiFi 6</p>
                         <p>• Hasta 100% descuento en la instalación</p>
+                        <p>• Escoge tu promoción</p>
                     </div>
                 </div>
             </article>
@@ -24,12 +25,12 @@ export default function PlanesList(){
                 <div className='desing'>
                     <div className='plan'>
                         <PlanViewer
-                            ancho='450'
+                            ancho='750'
                             precio={[23, 90]}
                         />
                     </div>
                     <div className='detalles'>
-                        <p>• 450 megas por siempre</p>
+                        <p>• 750 megas por siempre</p>
                         <p>• Incluye Router WiFi 6</p>
                         <p>• Hasta 100% descuento en la instalación</p>
                         <p>• Escoge tu promoción</p>
@@ -41,12 +42,12 @@ export default function PlanesList(){
                 <div className='desing'>
                     <div className='plan'>
                         <PlanViewer
-                            ancho='600'
+                            ancho='900'
                             precio={[29, 90]}
                         />
                     </div>
                     <div className='detalles'>
-                        <p>• 600 megas por siempre</p>
+                        <p>• 900 megas por siempre</p>
                         <p>• Incluye 2 Routers WiFi 6</p>
                         <p>• Hasta 100% descuento en la instalación</p>
                         <p>• Escoge tu promoción</p>
@@ -58,12 +59,12 @@ export default function PlanesList(){
                 <div className='desing'>
                     <div className='plan'>
                         <PlanViewer
-                            ancho='700'
+                            ancho='1000'
                             precio={[42, 90]}
                         />
                     </div>
                     <div className='detalles'>
-                        <p >• 700 megas por siempre</p>
+                        <p >• 1000 megas por siempre</p>
                         <p>• Incluye 2 Routers WiFi 6</p>
                         <p>• Hasta 100% descuento en la instalación</p>
                         <p>• Escoge tu promoción</p>

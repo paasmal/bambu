@@ -3,12 +3,16 @@ export default function PlanViewer({ ancho, precio, main }){
         <article>
             <p className='band'>{ancho}</p>
             <div className='cont-price'>
-                <p className='pm'>MEGAS</p>
+                <div className='dis'>
+                    <p className='pm'>MEGAS</p>
+                    {main && <p className='desde'>Desde</p>}
+                </div>
                 <div className='price'>
                     <p className='high'>{precio[0]}</p>
                     <div>
                         <p className='ctvs'>,{precio[1]}</p>
                         <p className='imp'>+imp</p>
+                        
                     </div>
                 </div>
             </div>
@@ -26,6 +30,12 @@ export default function PlanViewer({ ancho, precio, main }){
                     margin-top: 15px;
                     display: flex;
                     align-items: flex-start;
+                }
+
+                .dis{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
                 }
 
                 .pm{
@@ -60,6 +70,16 @@ export default function PlanViewer({ ancho, precio, main }){
                 .imp{
                     margin-left: 5px;
                     font-size: ${main ? '16px' : '15px'};
+                }
+
+                .desde{
+                    margin-top: 5px;
+                    background: #AAA;
+                    padding: 1px 8px 2px 8px;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: 200;
+                    border-radius: 5px;
                 }
 
                 @media screen and (max-width: 640px){

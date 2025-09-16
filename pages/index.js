@@ -56,7 +56,7 @@ export default function Home() {
         <Footer reference={footerRef} />
         <div className='cont-gonet'>
           <div className='gonet'>
-            <img src='/portada-gonet.png' />
+            <img src='/portada-gonet1.png' />
             <div className='clo' onClick={() => setGonet(false)}>
               <p>X</p>
             </div>

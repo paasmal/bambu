@@ -17,8 +17,8 @@ export default function Hero({ onScrollPlanes }){
             </div>
             <div className='plan'>
                 <PlanViewer
-                    ancho='300'
-                    precio={[19, 90]}
+                    ancho='600'
+                    precio={[16, 90]}
                     main
                 />
                 <p className='veloz'>Navegación ultraveloz</p>
